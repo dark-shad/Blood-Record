@@ -25,7 +25,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/receiver_register_page.php" class="nav-link" onclick="scrollToDownload()">
+                        <a href="pages/receiver/receiver_register_page.php" class="nav-link" onclick="scrollToDownload()">
+                            <i class="now-ui-icons education_paper"></i>
+                            <p>Sign up</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/hospital/hospital_register_page.php" class="nav-link" onclick="scrollToDownload()">
                             <i class="now-ui-icons education_paper"></i>
                             <p>Sign up</p>
                         </a>
