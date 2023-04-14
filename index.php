@@ -1,26 +1,28 @@
-<?php
-include('config/dbconn.php');
-include('assets/navbar.php');
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Blood Bank</title>
+  <meta charset="UTF-8">
+  <title>Blood Bank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
 </head>
-
 <body>
-    <div>
-        <div>
-            <h3>Nature is the root of living a healthy lifestyle.</h3>
-        </div>
-        <div>
-            <p>“Gardening is about enjoying the smell of things growing in the soil, getting dirty without feeling guilty, and generally taking the time to soak up a little peace and serenity"</p>
-        </div>
-    <?php
-    include('assets/footer.php');
-    ?>
+
+  <?php include('assets/navbar.php'); ?>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h1 class="display-4">Blood cannot be manufactured, it can only come from generous donors.</h1>
+        <p class="lead">“The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one—or even you"</p>
+      </div>
+    </div>
+  </div>
+
+  <?php include('assets/footer.php'); ?>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 </body>
 </html>

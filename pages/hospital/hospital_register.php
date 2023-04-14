@@ -48,7 +48,7 @@ if(isset($_POST['submit']))
         $result = mysqli_query($dbconn,$query);  
         
         if($result){
-            //redirecting to the display page. In our case, it is index.php
+            //redirecting to the display page
         header("Location: ../../index.php");
         }
         

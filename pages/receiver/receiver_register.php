@@ -1,6 +1,6 @@
 <?php
 // including the database connection file
-include("../config/dbconn.php");
+include("../../config/dbconn.php");
 if(isset($_POST['submit']))
 {   
     $firstname=$_POST['firstname'];
@@ -58,8 +58,8 @@ if(isset($_POST['submit']))
         $result = mysqli_query($dbconn,$query);  
         
         if($result){
-            //redirecting to the display page. In our case, it is index.php
-        header("Location: ../index.php");
+            //redirecting to the login page
+            header("Location: ../../index.php");
         }
         
     }
