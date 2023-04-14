@@ -18,6 +18,7 @@
       </div>
     </div>
   </div>
+  <br><br>
 
   <?php include('assets/footer.php'); ?>
 
