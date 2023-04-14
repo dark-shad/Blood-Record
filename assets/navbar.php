@@ -22,6 +22,9 @@
           <a class="nav-link" href="pages/signup_page.php">Sign up</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="pages/sample.php">Sample</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
         </li>
         <li class="nav-item">
