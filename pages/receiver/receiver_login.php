@@ -11,12 +11,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $pass = md5($pass1);
     $salt = "a1Bz20ydqelm8m1wql";
-    $pass = $salt.$pass;
+    $pass1 = $salt.$pass;
 
     date_default_timezone_set('Asia/Manila');
     $date = date("Y-m-d H:i:s");            
 
-    $query = mysqli_query($dbconn, "SELECT * FROM `receiver` WHERE receiver_id='$user' AND password='$pass'");
+    $query = mysqli_query($dbconn, "SELECT * FROM `receiver` WHERE username='$user' AND password='$pass1'");
     $res = mysqli_fetch_array($query);
 
     if (mysqli_num_rows($query) < 1) {

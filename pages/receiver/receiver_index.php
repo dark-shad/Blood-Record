@@ -1,3 +1,3 @@
 <?php
-    include('../../assets/login_reciever_navbar.php');
+    include('../../assets/login_receiver_navbar.php');
 ?>
