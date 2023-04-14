@@ -9,8 +9,15 @@ if (!isset($_SESSION['id']) || (trim($_SESSION['id']) == '')) {
     exit();
 }
 
+// Define the column names as an array
+$columns = array('Blood Group', 'Receiver Name');
+
 // Prepare and execute SQL query
-$sql = "SELECT * FROM request WHERE hospital_id = " . $_SESSION['id'];
+$sql = "SELECT r.blood_grp, rcv.firstname
+FROM request r
+INNER JOIN receiver rcv ON r.receiver_id = rcv.receiver_id
+WHERE r.hospital_id = {$_SESSION['id']}";
+
 $result = mysqli_query($dbconn, $sql);
 
 ?>
@@ -34,9 +41,9 @@ $result = mysqli_query($dbconn, $sql);
                 <table class="table table-bordered table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <?php while ($fieldinfo = mysqli_fetch_field($result)) : ?>
-                            <th scope="col"><?php echo $fieldinfo->name; ?></th>
-                            <?php endwhile; ?>
+                            <?php foreach ($columns as $column) : ?>
+                            <th scope="col"><?php echo $column; ?></th>
+                            <?php endforeach; ?>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,7 +57,7 @@ $result = mysqli_query($dbconn, $sql);
                         <?php endwhile; ?>
                         <?php else : ?>
                         <tr>
-                            <td colspan="5">No results found.</td>
+                            <td colspan="<?php echo count($columns); ?>">No results found.</td>
                         </tr>
                         <?php endif; ?>
                     </tbody>
@@ -66,5 +73,3 @@ $result = mysqli_query($dbconn, $sql);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmY
