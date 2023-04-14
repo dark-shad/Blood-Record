@@ -21,13 +21,13 @@
                     <li class="nav-item">
                         <a href="pages/hospital/hospital_request.php" class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
                             <i class="now-ui-icons users_single-02"></i>
-                            <p>Request</p>
+                            <p>View Request</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="hospital_display.php" class="nav-link" onclick="scrollToDownload()">
                             <i class="now-ui-icons education_paper"></i>
-                            <p>Stock</p>
+                            <p>Sample</p>
                         </a>
                     </li>
                     <li class="nav-item">

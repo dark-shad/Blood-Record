@@ -19,24 +19,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="pages/user_login_page.php" class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-                            <i class="now-ui-icons users_single-02"></i>
+                        <a href="pages/login_page.php" class="nav-link" onclick="scrollToDownload()">
+                            <i class="now-ui-icons education_paper"></i>
                             <p>Login</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/receiver/receiver_register_page.php" class="nav-link" onclick="scrollToDownload()">
+                        <a href="pages/signup_page.php" class="nav-link" onclick="scrollToDownload()">
                             <i class="now-ui-icons education_paper"></i>
                             <p>Sign up</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="pages/hospital/hospital_register_page.php" class="nav-link" onclick="scrollToDownload()">
-                            <i class="now-ui-icons education_paper"></i>
-                            <p>Sign up</p>
-                        </a>
-                    </li>
-					
                     <li class="nav-item">
                         <a class="nav-link" href="pages/products.php">
                             <i class="now-ui-icons files_paper"></i>

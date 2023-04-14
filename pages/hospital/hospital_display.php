@@ -1,6 +1,8 @@
 <?php
+include('../../assets/login_hospital_navbar.php');
 // Include database connection file
 require('../../config/dbconn.php');
+
 
 session_start();
 if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
@@ -9,7 +11,7 @@ if (!isset($_SESSION['id']) ||(trim ($_SESSION['id']) == '')) {
     }      
 
 // Prepare and execute SQL query
-$sql = "SELECT * FROM stock";
+$sql = "SELECT * FROM stock WHERE hospital_id = " . $_SESSION['id'];
 $result = mysqli_query($dbconn, $sql);
 
 // Display data in table
@@ -38,3 +40,9 @@ echo '</table>';
 // Close database connection
 mysqli_close($dbconn);
 ?>
+
+<div>
+    <a href="add_sample.php">
+        <button type="submit" name="add">Add Sample</button>
+        </a>
+</div>

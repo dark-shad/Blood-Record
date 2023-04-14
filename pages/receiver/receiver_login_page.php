@@ -18,7 +18,7 @@
     <div>
                     <form class="form" method="POST" action="receiver_login.php">
                         <div>
-                            Hospital Login
+                            User Login
                         </div><br>
                         <div class="content">
                             <div>
